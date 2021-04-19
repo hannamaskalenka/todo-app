@@ -11,7 +11,7 @@ const TodoItem = (props) => {
 
   return (
     <li className="item-container">
-      <label htmlFor={props.key} className={labelClassname}>
+      <label htmlFor={props.id} className={labelClassname}>
         <input
           type="checkbox"
           className="item-checkbox"
