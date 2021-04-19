@@ -1,16 +1,18 @@
 import React from "react";
 import TodoList from "./todos/TodoList";
 import Header from "./shared/Header";
-import { todosURL } from "./../constants";
+import API from "./../api";
 
 function App() {
   const [todos, setTodos] = React.useState([]);
 
   React.useEffect(() => {
-    fetch(todosURL)
-      .then((response) => response.json())
-      .then((data) => setTodos(data))
-      .catch((error) => console.log(error));
+    const loadData = async () =>
+      await API.get("/todos")
+        .then((response) => response.data)
+        .then((data) => setTodos(data))
+        .catch((error) => console.log(error));
+    loadData();
   }, []);
 
   return (
