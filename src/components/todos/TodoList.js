@@ -4,7 +4,7 @@ import TodoItem from "./TodoItem";
 const TodoList = ({ todos }) => {
   return todos.length ? (
     <div className="todos-container">
-      <h2>Todo: </h2>
+      <h2>To do: </h2>
       <ul>
         {todos.map((todo) => {
           return (

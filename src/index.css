@@ -19,7 +19,7 @@ h2 {
 }
 
 .todos-container {
-  margin-left: 10px;
+  margin: 0 10px;
 }
 .todos-container ul {
   margin: 0px;
@@ -28,8 +28,13 @@ h2 {
 
 .item-container {
   display: flex;
-  border-radius: 10px;
   padding: 1rem;
+  background: rgba(207, 207, 207, 0.2);
+  margin-bottom: 10px;
+}
+
+.item-container:hover {
+  background: rgba(207, 207, 207, 0.3);
 }
 
 .item-container:hover {
@@ -43,6 +48,7 @@ h2 {
 .item-container .item-label {
   font-size: 16px;
   color: black;
+  cursor: pointer;
 }
 .item-container .item-label.checked {
   color: grey;
