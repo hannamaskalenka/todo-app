@@ -8,7 +8,7 @@ function App() {
 
   React.useEffect(() => {
     const loadData = async () =>
-      await API.get("/todos")
+      await API.get("/todos?_page=1&_limit=15")
         .then((response) => response.data)
         .then((data) => setTodos(data))
         .catch((error) => console.log(error));
